@@ -1,0 +1,8 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+  - name: make sure vim is configured correctly
+    ansible.builtin.copy:
+      src: vimrc
+      dest: .vimrc
