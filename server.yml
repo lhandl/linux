@@ -1,0 +1,7 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: set prompt
+    ansible.builtin.copy:
+      src: prompt.sh
+      dest: /etc/profile.d/prompt.sh
