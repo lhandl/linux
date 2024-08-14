@@ -1,0 +1,12 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  become: true
+  tasks:
+    - name: install packages
+      ansible.builtin.package:
+        name:
+          - nmon
+          - htop
+          - tree
+          - mc
